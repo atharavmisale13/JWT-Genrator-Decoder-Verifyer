@@ -1,0 +1,154 @@
+.decoder-page {
+  width: min(100% - 32px, 1000px);
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.decoder-intro {
+  margin-bottom: 28px;
+}
+
+.decoder-intro h1 {
+  margin: 12px 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.decoder-intro p {
+  max-width: 680px;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.decoder-panel {
+  display: grid;
+  gap: 24px;
+}
+
+.decoder-form,
+.decoder-results {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--border-color, #303747);
+  border-radius: 16px;
+  background: var(--surface-color, #151a24);
+}
+
+.decoder-form-header,
+.decoder-results-header,
+.json-result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.decoder-form-header {
+  margin-bottom: 24px;
+}
+
+.decoder-form-header h2,
+.decoder-results-header h3 {
+  margin: 8px 0;
+}
+
+.decoder-form-header p {
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.decoder-form .form-field {
+  margin-bottom: 22px;
+}
+
+.decoder-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid var(--border-color, #303747);
+  border-radius: 10px;
+  background: var(--background-color, #0c1018);
+  color: inherit;
+  font: inherit;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.decoder-form textarea:focus-visible {
+  outline: 2px solid var(--accent-color, #8b9cff);
+  outline-offset: 2px;
+}
+
+.decoder-results {
+  display: grid;
+  gap: 24px;
+}
+
+.decoder-metadata {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.decoder-metadata > div {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--border-color, #303747);
+  border-radius: 10px;
+}
+
+.decoder-metadata span,
+.decoder-metadata strong {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.decoder-metadata span {
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.json-result {
+  min-width: 0;
+}
+
+.json-result pre {
+  overflow-x: auto;
+  padding: 18px;
+  border: 1px solid var(--border-color, #303747);
+  border-radius: 10px;
+  background: var(--background-color, #0c1018);
+  line-height: 1.7;
+}
+
+.json-result code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.decoder-form .form-error {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 650px) {
+  .decoder-page {
+    padding-top: 28px;
+  }
+
+  .decoder-form,
+  .decoder-results {
+    padding: 16px;
+  }
+
+  .decoder-metadata {
+    grid-template-columns: 1fr;
+  }
+
+  .decoder-form-header,
+  .decoder-results-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

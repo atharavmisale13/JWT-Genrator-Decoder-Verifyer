@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Private and test keys
+server/test-keys/
+
+# Build output
+client/dist/
+server/dist/
+
+# Test reports
+playwright-report/
+test-results/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*

@@ -1,0 +1,116 @@
+.verifier-page {
+  width: min(100% - 32px, 1000px);
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.verifier-intro {
+  margin-bottom: 28px;
+}
+
+.verifier-intro h1 {
+  margin: 12px 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.verifier-intro p {
+  max-width: 680px;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.verifier-panel {
+  display: grid;
+  gap: 24px;
+}
+
+.verifier-form,
+.verification-result {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--border-color, #303747);
+  border-radius: 16px;
+  background: var(--surface-color, #151a24);
+}
+
+.verifier-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.verifier-heading h2 {
+  margin: 8px 0;
+}
+
+.verifier-heading p {
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.verifier-form .form-field {
+  margin-bottom: 22px;
+}
+
+.verifier-form textarea,
+.verifier-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid var(--border-color, #303747);
+  border-radius: 10px;
+  background: var(--background-color, #0c1018);
+  color: inherit;
+  font: inherit;
+}
+
+.verifier-form textarea {
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.verifier-form textarea:focus-visible,
+.verifier-form select:focus-visible {
+  outline: 2px solid var(--accent-color, #8b9cff);
+  outline-offset: 2px;
+}
+
+.verification-result {
+  overflow-wrap: anywhere;
+}
+
+.verification-result h3 {
+  margin: 12px 0;
+}
+
+.verification-payload pre {
+  overflow-x: auto;
+  padding: 18px;
+  border: 1px solid var(--border-color, #303747);
+  border-radius: 10px;
+  background: var(--background-color, #0c1018);
+  line-height: 1.7;
+}
+
+.verification-payload code {
+  font-family: Consolas, "Courier New", monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 650px) {
+  .verifier-page {
+    padding-top: 28px;
+  }
+
+  .verifier-form,
+  .verification-result {
+    padding: 16px;
+  }
+
+  .verifier-heading {
+    flex-direction: column;
+  }
+}
