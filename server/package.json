@@ -43,6 +43,9 @@
   "jose": "^6.2.12",
   
     
+  "jwt-generator": "file:..",
+  
+    
   "mongoose": "^9.11.1",
   
     
